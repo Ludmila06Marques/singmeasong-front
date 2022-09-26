@@ -1,8 +1,8 @@
 
 describe('Testa a pagina home', () => {
   
- //beforeEach(() => {
- //  cy.request("POST", "http://localhost:5000/recommendations/reset", {});  })
+ beforeEach(() => {
+ cy.request("POST", "http://localhost:5000/recommendations/reset", {});  })
   it('Testa criar um recomendacao ', () => {
     const video={
       name:"oioioiiiii",
@@ -44,6 +44,7 @@ describe('Testa a pagina home', () => {
     cy.url().should('eq' ,'http://localhost:3000/' )
 
   })
+  /* 
   it('Testa dar play no video',()=>{
     cy.get('#play').click()
   })
@@ -54,5 +55,6 @@ describe('Testa a pagina home', () => {
   it('Testa dar dislike', ()=>{
     cy.get('#down').click()
   })
+  */
 
 })
